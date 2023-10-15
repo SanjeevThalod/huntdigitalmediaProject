@@ -26,31 +26,36 @@ const TablePage = () => {
   };
   
   useEffect(() => {
-    const numberOfDays = calculateNumberOfDays(newEntry.StartDate, newEntry.EndDate, newEntry.DatesExcludedArray);
+    const numberOfDays = calculateNumberOfDays(newEntry.StartDate, newEntry.EndDate, newEntry.DatesExcluded);
     setNewEntry((prevNewEntry) => ({ ...prevNewEntry, NumberOfDays: numberOfDays }));
-  }, [newEntry.StartDate, newEntry.EndDate, newEntry.DatesExcludedArray]);  
+  }, [newEntry.StartDate, newEntry.EndDate, newEntry.DatesExcluded]);
+  
 
-  const calculateNumberOfDays = (startDate, endDate, excludedDates) => {
+  const calculateNumberOfDays = (startDate, endDate, datesExcluded) => {
     const start = new Date(startDate);
     const end = new Date(endDate);
-    const excludedDatesArray = excludedDates.map((date) => new Date(date));
+    const excludedDates = datesExcluded
+      .split(', ')
+      .map((date) => new Date(date));
   
     let totalDays = 0;
+    let excludedDaysCount = 0;
   
     while (start <= end) {
       const currentDateString = start.toDateString();
-      const isExcluded = excludedDatesArray.some((date) => date.toDateString() === currentDateString);
+      const isExcluded = excludedDates.some((date) => date.toDateString() === currentDateString);
   
       if (!isExcluded) {
         totalDays++;
+      } else {
+        excludedDaysCount++;
       }
   
       start.setDate(start.getDate() + 1);
     }
   
-    return totalDays - excludedDatesArray.length;
+    return totalDays - excludedDaysCount;
   };
-  
 
   const handleNewEntryChange = (field, value) => {
     setNewEntry({ ...newEntry, [field]: value });
