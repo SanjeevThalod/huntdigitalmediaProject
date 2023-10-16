@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './TablePageDarkMode.css';
+import './TablePage.css'
 
 const TablePage = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,6 +24,7 @@ const TablePage = () => {
   }
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    
   };
   
   useEffect(() => {

@@ -1,4 +1,3 @@
-import './App.css';
 import TablePage from './TablePage';
 
 function App() {

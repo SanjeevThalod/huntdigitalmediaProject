@@ -1,14 +1,23 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
 :root {
-  --background: #1a1a1a;
+  --background: #0f172a;
   --text-color: #ffffff;
-  --table-background: #303030;
-  --table-header-background: #121212;
+  --table-background: #4b5563;
+  --table-header-background: #1f2937;
+  
+}
+*{
+  font-family:'Poppins', sans-serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--text-color);
   font-size: 16px;
+}
+.App-header h1{
+  text-align:center;
 }
 
 .table-container {
@@ -17,6 +26,7 @@ body {
 
 .table-container {
   width: 100%;
+  
   /* Ensure the table container takes the full width */
   overflow-x: auto;
   /* Enable horizontal scrolling */
@@ -53,7 +63,7 @@ th {
 }
 
 tr:hover {
-  background-color: #2f2c2c;
+  background-color: #082f49;
   cursor: pointer;
 }
 
@@ -82,113 +92,88 @@ tr:hover {
 
 /* Style for the Add Entry button */
 .add-entry-button {
-  background-color: #008CBA;
+  background-color: #0056b3;;
   /* Blue color */
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top:10px;
 }
 
 .add-entry-button:hover {
-  background-color: #005A85;
+  background-color: #2e66a1;;
   /* Darker shade of blue on hover */
 }
 
 /* Style for the Save Entry button */
 .save-entry-button {
-  background-color: #4CAF50;
-  /* Green color */
+  background-color: #746767;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top:10px;
 }
 
 .save-entry-button:hover {
-  background-color: #357D3B;
-  /* Darker shade of green on hover */
+  background-color: #292525;
+  
 }
 
-/* Style for the Add Entry button */
-.add-entry-button {
-  background-color: #008CBA;
-  /* Blue color */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 5px;
-  /* Add margin to create spacing */
-}
-
-.add-entry-button:hover {
-  background-color: #005A85;
-  /* Darker shade of blue on hover */
-}
 
 /* Style for the Save Entry button */
-.save-entry-button {
-  background-color: #4CAF50;
-  /* Green color */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 5px;
-  /* Add margin to create spacing */
-}
-
-.save-entry-button:hover {
-  background-color: #357D3B;
-  /* Darker shade of green on hover */
-}
 
 /* Style for the Add Date button */
 .add-date-button {
-  background-color: #FFD700;
-  /* Yellow color */
-  color: #000;
-  /* Black text */
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 5px;
-  /* Add margin to create spacing */
+  display: inline-block;
+    font-weight: 400;
+    color: #28a745;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #28a745;
+    padding: 0.370rem 0.70rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    margin-right: 5px;
+    margin-bottom:5px;
+  
 }
 
 .add-date-button:hover {
-  background-color: #E2C91A;
+  background-color: #28a745;
+  color: #fff;
   /* Darker shade of yellow on hover */
 }
 
 /* Style for the Remove Date button */
 .remove-date-button {
-  background-color: #FF6347;
-  /* Red color */
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 5px;
-  /* Add margin to create spacing */
+  display: inline-block;
+    font-weight: 400;
+    color: #dc3545;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    padding: 0.370rem 0.70rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
 }
 
 .remove-date-button:hover {
-  background-color: #D94A3B;
-  /* Darker shade of red on hover */
+  background-color: #dc3545;
+  color:#fff;
 }
 
 
