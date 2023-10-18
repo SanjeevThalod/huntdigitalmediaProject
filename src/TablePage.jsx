@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './TablePageDarkMode.css';
+// import './TablePageDarkMode.css';
 import './TablePage.css'
 
 const TablePage = () => {
@@ -23,7 +23,9 @@ const TablePage = () => {
     };
   }
   const toggleDarkMode = () => {
+    
     setDarkMode(!darkMode);
+    document.body.classList.toggle('dark', darkMode)
     
   };
   

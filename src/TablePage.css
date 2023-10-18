@@ -1,40 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-*{
-  margin:0;
-  padding:0;
-  font-family:'Poppins', sans-serif;
-  color:#000;
+/* Light mode styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333; /* Light background color for the body */
+  color: #333; /* Dark text color for light mode */
 }
-body{
-  background-color: #ddd;
+
+.App-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #666;
+  width: 100%;
+  background-color: #fff; /* Light background color for the header */
 }
+
+.App-header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #333; /* Dark text color for light mode */
+}
+
 .table-container {
-    margin: 20px;
+  background-color: #fff; /* Light background color for the table container */
+  color: #333; /* Dark text color for light mode */
+  border-radius: 8px; /* Optional: add border-radius for a rounded look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add box-shadow */
+}
+
+.mode,
+.add-entry-button,
+.save-entry-button,
+.add-date-button,
+.remove-date-button {
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #4caf50; /* Green button color for light mode */
+  color: #fff; /* White text color for light mode */
+}
+
+/* Input field styles for light mode */
+.date-field,
+.input-field {
+  border: 1px solid #666;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+/* Hover effect for buttons */
+.mode:hover,
+.add-entry-button:hover,
+.save-entry-button:hover,
+.add-date-button:hover,
+.remove-date-button:hover {
+  background-color: #666;
+}
+
+/* Focus effect for input fields */
+.date-field:focus,
+.input-field:focus {
+  outline-color: #999;
+}
+
+/* Table styles for both light and dark modes */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #444;
+  color: #fff;
+}
+
+th {
+  background-color: #1f2937;
+  border: 1px solid #444; /* Border for th elements in both light and dark modes */
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #444; /* Border for td elements in both light and dark modes */
+  padding: 10px;
+}
+tr:hover{
+  background-color: #082f49;
+  cursor: pointer;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #0f172a; /* Dark background color for the body */
+  color: #fff; /* Light text color for dark mode */
+}
+
+.table-container.dark {
+  background-color: #333; /* Dark background color for the table container */
+  color: #fff; /* Light text color for dark mode */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .App-header h1 {
+    font-size: 20px; /* Further decrease font size for smaller screens */
   }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
+
+  .mode,
+  .add-entry-button,
+  .save-entry-button,
+  .add-date-button,
+  .remove-date-button {
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
   }
-  
-  th, td {
-    border: 1px solid #ddd;
+
+  .date-field,
+  .input-field {
+    font-size: 14px; /* Decrease font size for input fields on smaller screens */
+    padding: 6px;
+  }
+
+  th,
+  td {
     padding: 8px;
-    text-align: center;
   }
-  tr{
-    background-color:#ddd;
-  }
-  
-  th {
-    background-color: #0ea5e9;
-    padding: 30px;
-  }
-  
-  tr:hover {
-    background-color: #93c5fd;
-  }
-  .mode{
-    background-color:#0ea5e9 ;
-  }
-  
+}
